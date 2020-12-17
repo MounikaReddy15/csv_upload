@@ -18,11 +18,23 @@
 </head>
 <body>
     <div class="input-form">
-        <form action="" method="POST">
-            <input type="file" id="file-input" name="file">
+        <form action="/uploadcsv" method="POST" enctype="multipart/form-data">
+            <input type="file" id="file-input" name="avatar">
             <button>Upload</button>
 
         </form>
+        <div>
+            <ul>
+                <% for(let i of upload){ %> 
+                <li> 
+                    <div class = "details">
+                        <a href="/display/?id=<%= i._id %>"> <p><%= i.avatar %> </p> </a> 
+                    </div>
+                 </li>
+         
+                 <% } %>
+             </ul>
+        </div>
     </div>
 </body>
 </html>

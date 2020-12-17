@@ -13,8 +13,10 @@
   "author": "Mounika",
   "license": "ISC",
   "dependencies": {
+    "csv-parser": "^3.0.0",
     "ejs": "^3.1.5",
     "express": "^4.17.1",
-    "mongoose": "^5.11.5"
+    "mongoose": "^5.11.5",
+    "multer": "^1.4.2"
   }
 }

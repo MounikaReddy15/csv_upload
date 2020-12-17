@@ -5,8 +5,20 @@ const app = express();
 // to connect to database
 const db = require("./config/mongoose");
 
+// for defining assets
+const path = require('path');
+
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+
+//folder for static files
+app.use(express.static(path.join(__dirname, 'assets')));
+
+
+// for using avatars
+//  the directory of index joined with uploads which means codeial/uploads is available in uploads
+// make the uploads path available to the browser
+app.use('/uploads', express.static(__dirname + '/uploads'));
 
 const port = process.env.PORT || 8000;
 

@@ -1,0 +1,25 @@
+
+
+
+#header-row {
+   
+    display: inline-block;
+    text-align: center;
+}
+
+#body-row {
+    display: inline-block;
+    align-items: center;
+    
+}
+
+
+th, td {
+  padding: 5px;
+}
+
+ 
+/* th {
+    text-align: left;
+} */
+

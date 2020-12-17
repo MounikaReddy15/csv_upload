@@ -7,6 +7,6 @@ const controller = require('../controllers/index');
 
 router.get('/', controller.home);
 router.post('/uploadcsv', controller.uploadCsv);
-router.get('/display/:id', controller.displayFile);
+router.get('/display', controller.displayFile);
 
 module.exports = router;
