@@ -9,30 +9,32 @@
 
 <body>
     <input type="text" id="search-input" onkeyup="searchData()" placeholder="search">
-    <table>
-        <div>
+    <table id= "table-data">
+        
         <% for(let i of Object.keys(results[0])){ %> 
-        <tr id= "header-row">
+        <thead id= "header-row">
+        <tr >
           <th> <%= i %>  </th>
          
         </tr>
+        </thead>
         <% } %>
        
-        </div>
+        
         
         <br />
         
-        <div id="display-data">
+        
         <% for(let l of results){ %> 
-            <div>
+            <tbody>
             <tr id="body-row">
              <% for(let j in l){ %> 
               <td> <%= l[j] %>  </td>
               <% } %>
             </tr>
-            </div>
+        </tbody>
             <% } %>
-        </div>   
+         
     </table>
 <script src="/js/display.js"></script>
 </body>
