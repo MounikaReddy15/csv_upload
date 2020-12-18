@@ -15,8 +15,6 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, 'assets')));
 
 
-// for using avatars
-//  the directory of index joined with uploads which means codeial/uploads is available in uploads
 // make the uploads path available to the browser
 app.use('/uploads', express.static(__dirname + '/uploads'));
 

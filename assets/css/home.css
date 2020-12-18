@@ -2,8 +2,8 @@
 
 
 #header-row {
-   display: inline-block;
-   /* text-align: center; */
+  display: inline-block;
+   
 }
 
 
@@ -14,38 +14,74 @@
 }
 
 #table-data {
-    border-collapse: collapse;
-    /* margin: 15px 0; */
-    font-size: 0.9em;
-    /* min-width: 400px; */
-    border-radius: 5px 5px 0 0;
-    overflow: hidden;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  font-size: 0.9em;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+
 }
   
 #table-data thead tr {
-    background-color: #009879;
-    color: #ffffff;
-    text-align: left;
-    font-weight: bold;
+  background-color: #009879;
+  color: #ffffff;
+  text-align: center;
+  align-items: center;
+  font-weight: bold;
 }
   
 #table-data th,
 #table-data td {
-    padding: 10px 8px;
+  padding: 10px 8px;
 }
   
 #table-data tbody tr {
-    border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid #dddddd;
 }
   
-  #table-data tbody tr:nth-of-type(even) {
-    background-color: #f3f3f3;
-  }
+#table-data tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
   
-  #table-data tbody tr:last-of-type {
-    border-bottom: 2px solid #009879;
-  }
+#table-data tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
   
 
-  
+.input-form {
+  margin-left: 40%;
+  margin-top: 10%;
+}
+
+ul li {
+  font-size: 1.2rem;
+  list-style: circle;
+  color: white;
+}
+
+ul li:hover {
+  color: rgb(215, 211, 219);
+}
+
+a:link {
+  text-decoration: none;
+}
+
+#search-input {
+  height: 30px;
+  width: 300px;
+  margin-left: 40%;
+  margin-bottom: 30px;
+  margin-top: 3%;
+  padding-left: 1%;
+}
+
+#file-input {
+  color: white;
+}
+
+#upload-name {
+  color: white;
+}
+
+#upload-name:hover {
+  color: rgb(215, 211, 219);
+}

@@ -15,7 +15,10 @@ const AVATAR_PATH = path.join('/uploads/avatars');
 const uploadSchema = new mongoose.Schema({
     avatar: {
         type: String
-    }
+    },
+    name: {
+      type: String
+  }
     
 },
 {
@@ -27,16 +30,14 @@ let storage = multer.diskStorage({
       cb(null, path.join(__dirname, '..', AVATAR_PATH));
     },
     filename: function (req, file, cb) {
-      // console.log(file, 'file');
-      // console.log(req,'req')
       cb(null, file. originalname + '-' + Date.now());
     }
   });
 
 
- // static func for users
- //   attaches the diskStorage on multer in the storage property
- //single says only one instance will be uploaded of avatar  
+
+ // attaches the diskStorage on multer in the storage property
+ // single says only one instance will be uploaded of avatar  
  uploadSchema.statics.uploadedAvatar = multer({ storage: storage }).single('avatar');
  //to make avatarpath publically available  
  uploadSchema.statics.avatarPath = AVATAR_PATH;

@@ -4,22 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> <%=title%></title>
-    <style>
-    .input-form {
-        margin: 0px;
-        margin-left: 40%;
-        margin-top: 10%;
-    }
-    /* #file-input {
-        height: 150px;
-        width: 60px;
-    } */
-    </style>
+   <link rel="stylesheet" href="/css/home.css">
+   <style>
+       body {
+           background-color: rgb(202, 81, 81);
+       }
+   </style>
 </head>
 <body>
     <div class="input-form">
-        <form action="/uploadcsv" method="POST" enctype="multipart/form-data">
-            <input type="file" id="file-input" name="avatar">
+        <form action="/uploadcsv" method="POST" id= "form-data" enctype="multipart/form-data">
+            <input type="file" id="file-input" accept=".csv" name="avatar">
             <button>Upload</button>
 
         </form>
@@ -28,7 +23,7 @@
                 <% for(let i of upload){ %> 
                 <li> 
                     <div class = "details">
-                        <a href="/display/?id=<%= i._id %>"> <p><%= i.avatar %> </p> </a> 
+                        <a href="/display/?id=<%= i._id %>"> <p id = "upload-name"><%= i.name %> </p> </a> 
                     </div>
                  </li>
          
@@ -36,5 +31,6 @@
              </ul>
         </div>
     </div>
+    <script src="/js/home.js"></script>
 </body>
 </html>
