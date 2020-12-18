@@ -45,7 +45,6 @@ try{
 // to view particular csv file
 module.exports.displayFile = async function(req,res) {
     const results = [];
-    console.log(req.query.id, "upload id");
     let upload = await Upload.findById(req.query.id);
     fs.createReadStream(path.join(__dirname,'..',upload.avatar))
     .pipe(csv())
